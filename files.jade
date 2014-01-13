@@ -1,0 +1,91 @@
+!!! 5
+html
+  head
+    title Auth0 With S3
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/app.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+  body
+    .files-page 
+      .container
+        header.site-header.clearfix
+          .col-xs-4
+            h1 
+              a(href="") Auth0 with S3
+
+          .col-xs-8
+            .login-info
+              img(src="https://pbs.twimg.com/profile_images/378800000672223469/c63651d6cdf690efd84679a536d29295.jpeg")
+              span Welcome Ricardo Rauch
+
+        .col-xs-3
+
+          .get-auth-left
+            .icon-badge
+              img(src="img/identification.png")
+            h3 Get Started
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            a(href="").btn.btn-success Sign Up Now
+
+        .col-xs-9
+          .files-list
+            a(href="").btn.btn-primary.upload-button
+              i.glyphicon.glyphicon-cloud-upload 
+              span Upload Files
+            h3 Your files
+
+            table.table
+              thead
+                th(style="width: 20px")
+                th Name
+                th Kind
+                th Modified
+              tbody
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-picture
+                  td 
+                    a(href="") file-example.png
+                  td Image/PNG
+                  td Yesterday
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-file
+                  td 
+                    a(href="") file-example.png
+                  td DLL
+                  td Yesterday
+                
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-film
+                  td 
+                    a(href="") file-example.png
+                  td MP4
+                  td Yesterday
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-picture
+                  td 
+                    a(href="") file-example.png
+                  td Image/PNG
+                  td Yesterday
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-file
+                  td 
+                    a(href="") file-example.png
+                  td DLL
+                  td Yesterday
+                
+                tr 
+                  td 
+                    i.glyphicon.glyphicon-film
+                  td 
+                    a(href="") file-example.png
+                  td MP4
+                  td Yesterday
