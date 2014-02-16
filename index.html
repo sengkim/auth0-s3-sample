@@ -24,18 +24,20 @@
      <script src="js/config.js"></script>
 
      <script>
+      store.set('path', window.location.pathname);
+
       var widget = new Auth0Widget({
-          domain:         window.config.domain,
-          clientID:       window.config.clientID,
-          callbackURL:    window.location.protocol + "//" + window.location.host + window.location.pathname,
-          callbackOnLocationHash: true
-        });
+        domain:         window.config.domain,
+        clientID:       window.config.clientID,
+        callbackURL:    window.location.protocol + "//" + window.location.host + window.location.pathname,
+        callbackOnLocationHash: true
+      });
 
       widget.parseHash(window.location.hash, function (profile, id_token, access_token, state) {
-          store.set('profile', JSON.stringify(profile));
-          store.set('id_token', id_token);
+        store.set('profile', JSON.stringify(profile));
+        store.set('id_token', id_token);
 
-          location.href = 'files.html'
+        location.href = 'files.html'
       });
 
      </script>

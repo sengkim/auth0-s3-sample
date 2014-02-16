@@ -87,14 +87,14 @@
       window.folder_prefix = 'dropboxclone/';
       
       function initialize_security_context(callback) {
-        if (!user.get()) return location.href = "/";
+        if (!user.get()) return location.href = store.get('path');
         
         // if token is not expired, return 
         if (user.get().aws_creds && 
             new Date(user.get().aws_creds.Expiration) > new Date()) return callback();
 
         get_aws_token(window.config, function(err, delegationResult) {
-          if (err) return location.href = '/';
+          if (err) return location.href = store.get('path');
           store.set('aws_creds', JSON.stringify(delegationResult.Credentials));
 
           callback();
@@ -108,8 +108,9 @@
                                          name:   user.get().profile.name }));
 
         $('.logout').on('click', function() {
+          var index = store.get('path')
           store.clear();
-          location.href = '/';
+          location.href = index;
         });
 
         bucket.config.credentials = 
