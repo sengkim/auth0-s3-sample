@@ -27,7 +27,7 @@
       var widget = new Auth0Widget({
           domain:         window.config.domain,
           clientID:       window.config.clientID,
-          callbackURL:    window.location.origin,
+          callbackURL:    window.location.protocol + "//" + window.location.host + window.location.pathname,
           callbackOnLocationHash: true
         });
 
