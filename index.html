@@ -13,11 +13,31 @@
       <div class="login-box">
         <div class="welcome-badge"></div>
         <h1>Auth0 With S3</h1>
-        <h4>Simple upload example</h4><a href="" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-user"></i><span>Login with Auth0</span></a>
+        <h4>Simple upload example</h4><a href="#_" onclick="widget.signin()" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-user"></i><span>Login with Auth0</span></a>
       </div>
       <div class="get-auth0">
         <h3><span>Get started today with Auth0 for free</span><a href="" class="btn btn-success">Sign Up Now!</a></h3>
       </div>
     </div>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
+     <script src="https://d19p4zemcycm7a.cloudfront.net/w2/auth0-widget-2.4.min.js"></script>
+     <script src="js/config.js"></script>
+
+     <script>
+      var widget = new Auth0Widget({
+          domain:         window.config.domain,
+          clientID:       window.config.clientID,
+          callbackURL:    window.location.origin,
+          callbackOnLocationHash: true
+        });
+
+      widget.parseHash(window.location.hash, function (profile, id_token, access_token, state) {
+          store.set('profile', JSON.stringify(profile));
+          store.set('id_token', id_token);
+
+          location.href = '/files.html'
+      });
+
+     </script>
   </body>
 </html>
