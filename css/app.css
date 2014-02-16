@@ -25,7 +25,7 @@ a:hover {
   border-radius: 3px;
 }
 .login-page .login-box .welcome-badge {
-  background: #eea20a url("img/logo.png") center no-repeat;
+  background: #eea20a url("../img/logo.png") center no-repeat;
   width: 200px;
   height: 200px;
   margin: auto auto 30px auto;
