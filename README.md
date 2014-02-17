@@ -2,7 +2,9 @@
 
 This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2, etc.) in combination with the powerful IAM policies.
 
-Demo: <http://auth0.github.io/auth0-s3-sample>
+**Demo: <http://auth0.github.io/auth0-s3-sample>**
+
+![](https://cloudup.com/cVRDC3kQe6l+)
 
 1. User logs in with Auth0 (any identity provider)
 2. Auth0 returns a JSON Web Token to the browser
