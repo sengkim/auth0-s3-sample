@@ -60,3 +60,5 @@ Run it on port 1338
 
     serve -p 1338
 
+## Licence 
+MIT
