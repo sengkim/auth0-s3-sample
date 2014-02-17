@@ -1,6 +1,6 @@
 ## Backend-less dropbox website clone
 
-This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2, etc.) in combination with IAM policies.
+This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2, etc.) in combination with the powerful IAM policies.
 
 Demo: <http://auth0.github.io/auth0-s3-sample>
 
@@ -20,12 +20,13 @@ Demo: <http://auth0.github.io/auth0-s3-sample>
 
 ## AWS IAM Policies
 
-A role was created in the IAM console containing these two statements. These will allow everything on the "user" folder and allow listing bucket with prefix condition based on user id
+A role needs to be created in the IAM console containing these two statements. These statements allow everything on a specific bucket path and allow listing the bucket objects with a prefix condition based on user id. This effectively creates a secure compartiment in S3 for each user.
 
 ```
 {
   "Version": "2012-10-17",
   "Statement": [{
+      "Sid": "AllowEverythingOnSpecificUserPath",
       "Effect": "Allow",
       "Action": [
         "*"
