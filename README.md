@@ -50,6 +50,8 @@ A role needs to be created in the IAM console containing these two statements. T
 }
 ```
 
+The `${saml:sub}` variable in the policy is replaced in runtime by AWS with the user id.
+
 ## Running it locally
 
 Install `serve` 
