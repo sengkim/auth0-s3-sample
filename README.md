@@ -1,10 +1,12 @@
-## Backend-less dropbox website clone
+## Backend-less dropbox clone
 
 This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2, etc.) in combination with the powerful IAM policies.
 
 **Demo: <http://auth0.github.io/auth0-s3-sample>**
 
-![](https://cloudup.com/cVRDC3kQe6l+)
+![](https://cloudup.com/cF6k5rJr309+)
+
+## How this works?
 
 1. User logs in with Auth0 (any identity provider)
 2. Auth0 returns a JSON Web Token to the browser
@@ -20,7 +22,19 @@ This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2
   
 4. With the AWS credentials you can now call the AWS APIs and have policies using ${saml:sub} to create policies to authorize users to access a bucket, rows or columns in DynamoDB, sending an email, etc.
 
-## AWS IAM Policies
+## FAQ
+
+### How is this secure if it's all client side?
+
+The key is: when the user log in, we obtain an AWS session token. With this token and the IAM policy using `{saml:sub}` we can constraint the resources the client can access.
+
+### What else can I do with AWS IAM policies?
+
+Almost every API in AWS support IAM Policies. For instance, you can create a policy in DynamoDB to do fine grained access control as [shown here](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/FGAC_DDB.html)
+
+* [AWS Products that support IAM policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SpecificProducts.html)
+
+### What IAM policies this sample uses?
 
 A role needs to be created in the IAM console containing these two statements. These statements allow everything on a specific bucket path and allow listing the bucket objects with a prefix condition based on user id. This effectively creates a secure compartiment in S3 for each user.
 
@@ -62,5 +76,5 @@ Run it on port 1338
 
     serve -p 1338
 
-## Licence 
-MIT
+And point your browser to <http://localhost:1338>
+
