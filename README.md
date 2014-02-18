@@ -50,7 +50,7 @@ A role needs to be created in the IAM console containing these two statements. T
 }
 ```
 
-The `${saml:sub}` variable in the policy is replaced in runtime by AWS with the user id.
+The `${saml:sub}` variable in the policy is replaced in runtime by AWS with the user id. For example, if a user logged in with any of the identity providers supported by Auth0, and its `user_id` is `ad|3456783129`, then this policy will allow any action to the S3 resource with this path `YOUR_BUCKET/dropboxclone/ad|3456783129`. It will also allow executing `s3:ListBucket` over the bucket with the prefix `dropboxclone/ad|3456783129`.
 
 ## Running it locally
 
