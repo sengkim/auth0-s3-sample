@@ -52,6 +52,9 @@ function list_files(bucket, callback) {
     var template = Handlebars.compile(source);
 
     $('.files').html(template({ files: files }));
+
+    $('.share-link').tooltip();
+
     callback();
   });  
 }
@@ -106,6 +109,12 @@ function bind_actions(bucket) {
   $('.share-link').unbind('click');
   $('.remove').unbind('click');
 
+
+  $(".share-link").click(function(){
+    $("#global-zeroclipboard-flash-bridge").click();
+  });
+
+
   ZeroClipboard.config( { moviePath: "http://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.2/ZeroClipboard.swf" } );
   var client = new ZeroClipboard($('.share-link'));
   client.on('complete', function(client, args) {
@@ -115,6 +124,7 @@ function bind_actions(bucket) {
   client.on('dataRequested', share_file(bucket, client, {clipboard: true}));
   $('.share-link').on('click', share_file(bucket, client, {clipboard: false}));
   $('.remove').on('click', remove_file(bucket));
+
 }
 
 function bind_upload(bucket) {
@@ -123,10 +133,18 @@ function bind_upload(bucket) {
   }); 
 
   $('.upload-file').on('change', function() {
+    $('.glyphicon').hide();
+    $('.upload-button span').hide();
+    $(".upload-button").append('<strong class="loading"><img src="img/loading.gif" /></strong>').attr("disabled", "disabled");
+
     var file = this.files[0];
     if (file) upload_file(bucket, file, function(err) {
       if (err) console.log('error uploading file');
-      refresh_list(bucket)
+      refresh_list(bucket);
+      $('.upload-button .glyphicon').show();
+      $('.upload-button span').show();
+      $('.upload-button .loading').remove();
+      $('.upload-button').removeAttr("disabled");
     });
   });
 }

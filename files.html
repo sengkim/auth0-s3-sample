@@ -4,9 +4,11 @@
     <title>S3-box</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet"><!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
+    <link href="css/app.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="files-page"> 
@@ -32,14 +34,15 @@
             <table class="table">
               <thead>
                 <th style="width: 20px"></th>
-                <th>Name</th>
+                <th style="width: 50%">Name</th>
                 <th>Created</th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
               </thead>
               <tbody class="files">
-                
-                
+                <tr>
+                  <td colspan="5" style="text-align: center; padding: 30px"><img src="img/loading_black.gif" /></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -56,7 +59,7 @@
           <td> <i class="glyphicon glyphicon-file"></i></td>
           <td> <a href="#_" class="file-item">{{name}}</a></td>
           <td>{{date}}</td>
-          <td><i title="Share Link" data-key="{{key}}" class="share-link glyphicon glyphicon-link"></i></td>
+          <td><i title="Copy Link" data-key="{{key}}" data-toggle="tooltip" class="share-link glyphicon glyphicon-link"></i></td>
           <td><i title="Remove" data-key="{{key}}" class="remove glyphicon glyphicon-trash"></i></td>
         </tr>
       
@@ -64,12 +67,13 @@
     </script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.min.js"></script>
     <script src="//d19p4zemcycm7a.cloudfront.net/w2/auth0-1.3.4.min.js"></script>
-
-     <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.2/ZeroClipboard.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
     <script src="js/files.js"></script>
     <script src="js/config.js"></script>
 
@@ -121,7 +125,6 @@
         bind_upload(bucket);
         refresh_list(bucket); 
       });
-      
       
     </script>      
   </body>

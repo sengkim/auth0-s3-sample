@@ -4,8 +4,10 @@ body {
   width: 100%;
 }
 h1,
-h2 {
-  font-weight: 100;
+h2,
+h3 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: lighter;
 }
 a:hover {
   text-decoration: none;
@@ -13,6 +15,10 @@ a:hover {
 .btn {
   border: 0;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 22px;
 }
 .btn.btn-success {
   background-color: #94c231;
@@ -26,29 +32,26 @@ a:hover {
 }
 .login-page .login-box .welcome-badge {
   background: #eea20a url("../img/logo.png") center no-repeat;
-  width: 200px;
-  height: 200px;
+  background-size: 70%;
+  width: 140px;
+  height: 140px;
   margin: auto auto 30px auto;
   border-radius: 5px;
   display: block;
 }
 .login-page .login-box .btn.btn-primary {
   font-weight: bold;
-  background-color: #51370e;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
   margin-top: 20px;
-  padding: 14px 24px 15px 25px;
 }
 .login-page .login-box .btn.btn-primary i {
   margin-right: 10px;
 }
-.login-page .login-box .btn.btn-primary:hover {
-  background-color: #362509;
-}
 .login-page .get-auth0 {
   background: #4e7ac7;
+  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
   color: #fff;
   position: fixed;
   bottom: 0;
@@ -68,9 +71,10 @@ a:hover {
   display: inline-block;
 }
 .login-page .get-auth0 h3 .btn {
-  border-radius: 100px;
+  border-radius: 3px;
   text-transform: uppercase;
   padding: 14px 20px;
+  font-size: 12px;
   letter-spacing: 1px;
   background-color: #94c231;
   margin-left: 20px;
@@ -86,7 +90,6 @@ a:hover {
   margin-bottom: 50px;
 }
 .files-page header.site-header h1 {
-  font-weight: bold;
   font-size: 20px;
 }
 .files-page header.site-header h1 a {
@@ -107,6 +110,7 @@ a:hover {
 }
 .files-page .get-auth-left {
   background-color: #4e7ac7;
+  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
   color: #fff;
   padding: 20px 10px;
   text-align: center;
@@ -135,7 +139,6 @@ a:hover {
 .files-page .get-auth-left .btn {
   margin-top: 10px;
 }
-
 .files-page .files-list h3 {
   margin-top: 0;
   margin-bottom: 30px;
@@ -147,18 +150,114 @@ a:hover {
 .files-page .files-list .upload-button i {
   margin-right: 6px;
 }
+.files-page .files-list .upload-button img {
+  position: relative;
+  top: -3px;
+}
 .files-page .files-list a {
   font-weight: bold;
 }
 .files-page .files-list tbody tr:hover {
   background: #f9f9f9;
 }
-footer{
+.files-page .files-list tbody tr .glyphicon-link:hover {
+  color: #00f;
+}
+.files-page .files-list tbody tr .glyphicon-trash:hover {
+  color: #f00;
+  cursor: pointer;
+}
+footer {
   text-align: center;
 }
-
 footer a {
   color: #333;
+}
+#global-zeroclipboard-html-bridge {
+  top: -1000000000px !important;
+}
+.link-copied {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  right: 0;
+  left: 0;
+}
+.tipsy-link {
+  display: block;
+}
+@-moz-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-webkit-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-o-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-ms-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-moz-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @-moz-keyframes get_auth0_text {
   0% {
