@@ -89,6 +89,12 @@ a:hover {
 .container {
   max-width: 800px;
 }
+.loading-global {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+}
 .files-page header.site-header {
   margin-bottom: 50px;
 }
@@ -256,6 +262,30 @@ footer a {
   100% {
     opacity: 1;
   }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+#drop-anywhere {
+  line-height: 500px;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+#drop-anywhere::before {
+  content: 'Drop to upload!';
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#drop-anywhere.show {
+  -webkit-animation: show 300ms;
 }
 @-moz-keyframes get_auth0_text {
   0% {
