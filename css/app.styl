@@ -1,0 +1,265 @@
+body
+	-webkit-font-smoothing antialiased
+	min-width 800px !important
+	width 100%
+
+h1, h2, h3
+	font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	font-weight lighter
+
+
+body.home
+	background #4e7ac7
+	background-image -webkit-radial-gradient(right top, #34478C 0%, rgba(52,71,140,0) 70%)
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	min-height: 700px;
+
+a
+	&:hover
+		text-decoration none
+
+.btn
+	border 0
+	font-weight bold
+	text-transform uppercase
+	font-size 11px
+	letter-spacing 1px
+	line-height 22px
+	&.btn-success
+		background-color #94c231
+
+.login-page
+
+	.login-box
+		margin 5% auto
+		background: white;
+		width 320px
+		text-align center
+		padding 40px 10px
+		border-radius 3px
+		.welcome-badge
+			background #eea20a url("../img/logo.png") center no-repeat
+			background-size 70%
+			width 140px
+			height 140px
+			margin auto auto 30px auto
+			border-radius 5px
+			display block
+		.btn
+			&.btn-primary
+				font-weight bold
+				text-transform uppercase
+				font-size 12px
+				letter-spacing 1px
+				margin-top 20px
+				i
+					margin-right 10px
+	.get-auth0
+		color #fff
+		background: rgba(0,0,0,.4);
+		position fixed
+		bottom 0
+		left 0
+		right 0
+		text-align center
+		padding 30px
+		min-width 700px
+		h3
+			font-weight 200
+			position relative
+			display inline-block
+			span
+				-webkit-animation get_auth0_text 2s
+				display inline-block
+			.btn
+				border-radius 3px
+				text-transform uppercase
+				padding 14px 20px
+				font-size: 12px;
+				letter-spacing 1px
+				background-color #94c231
+				margin-left 20px
+				-webkit-animation get_auth0_btn 2s
+				&:hover
+					background-color #59741d
+
+.container
+	max-width 800px
+
+.files-page
+	header
+		&.site-header
+			margin-bottom 50px
+			h1
+				font-size 20px
+				a
+					color #000
+			.login-info
+				text-align right
+				margin-top 20px
+				font-size 12px
+				span
+					opacity 0.5
+				img
+					width 30px
+					margin-right 10px
+					border-radius 40px
+	.get-auth-left
+		background-color #4e7ac7
+		background-image -webkit-radial-gradient(right top, #34478C 0%, rgba(52,71,140,0) 70%)
+		color #fff
+		padding 20px 10px
+		text-align center
+		border-radius 3px
+		.icon-badge
+			background #fff;
+			display: block
+			width 60px
+			height 60px
+			border-radius 3px
+			margin auto
+			margin-bottom 10px
+		img
+			width 40px
+			height auto
+			margin-top 14px
+		h3
+			margin-top 0
+			font-weight 200
+			a 
+				color: white;
+				font-weight: bold
+		p
+			opacity 0.6
+		.btn
+			margin-top 10px
+	.files-list
+		h3
+			margin-top 0
+			margin-bottom 30px
+			float left
+		.upload-button
+			float right
+			i
+				margin-right 6px
+
+			img 
+				position: relative
+				top: -3px;
+		a
+			font-weight bold
+		tbody
+			tr
+				&:hover
+					background #f9f9f9
+
+				a.glyphicon-link
+					color: black;
+					font-weight: normal
+					&:hover 
+						color: blue;
+				.glyphicon-trash:hover 
+					color: red;
+					cursor: pointer;
+
+footer
+	text-align center
+	a
+		color #333
+
+
+@-moz-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-webkit-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-o-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-ms-keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@keyframes get_auth0_text {
+  0% {
+    padding-right: 100px;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+@-moz-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes get_auth0_btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+

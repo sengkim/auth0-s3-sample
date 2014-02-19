@@ -9,6 +9,16 @@ h3 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: lighter;
 }
+body.home {
+  background: #4e7ac7;
+  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 700px;
+}
 a:hover {
   text-decoration: none;
 }
@@ -25,6 +35,7 @@ a:hover {
 }
 .login-page .login-box {
   margin: 5% auto;
+  background: #fff;
   width: 320px;
   text-align: center;
   padding: 40px 10px;
@@ -50,9 +61,8 @@ a:hover {
   margin-right: 10px;
 }
 .login-page .get-auth0 {
-  background: #4e7ac7;
-  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
   color: #fff;
+  background: rgba(0,0,0,0.4);
   position: fixed;
   bottom: 0;
   left: 0;
