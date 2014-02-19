@@ -53,7 +53,6 @@ function list_files(bucket, callback) {
 
     $('.files').html(template({ files: files }));
 
-    $('.share-link').tooltip();
 
     callback();
   });  
@@ -124,6 +123,16 @@ function bind_actions(bucket) {
   client.on('dataRequested', share_file(bucket, client, {clipboard: true}));
   $('.share-link').on('click', share_file(bucket, client, {clipboard: false}));
   $('.remove').on('click', remove_file(bucket));
+
+  $('#global-zeroclipboard-html-bridge').attr('title', "Copy Link").tooltip();
+
+  $('#global-zeroclipboard-html-bridge').click(function(){
+
+    $(this).attr('title', 'Copied!').tooltip('fixTitle').tooltip('show');
+
+    $(this).attr('data-original-title', "Copy Link").tooltip('fixTitle');
+
+  });
 
 }
 
