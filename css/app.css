@@ -160,7 +160,11 @@ a:hover {
 .files-page .files-list tbody tr:hover {
   background: #f9f9f9;
 }
-.files-page .files-list tbody tr .glyphicon-link:hover {
+.files-page .files-list tbody tr a.glyphicon-link {
+  color: #000;
+  font-weight: normal;
+}
+.files-page .files-list tbody tr a.glyphicon-link:hover {
   color: #00f;
 }
 .files-page .files-list tbody tr .glyphicon-trash:hover {
@@ -172,20 +176,6 @@ footer {
 }
 footer a {
   color: #333;
-}
-#global-zeroclipboard-html-bridge {
-  top: -1000000000px !important;
-}
-.link-copied {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.7);
-  right: 0;
-  left: 0;
-}
-.tipsy-link {
-  display: block;
 }
 @-moz-keyframes get_auth0_text {
   0% {
