@@ -118,6 +118,7 @@ a:hover {
 }
 .files-page .get-auth-left .icon-badge {
   background: #fff;
+  display: block;
   width: 60px;
   height: 60px;
   border-radius: 3px;
@@ -132,6 +133,10 @@ a:hover {
 .files-page .get-auth-left h3 {
   margin-top: 0;
   font-weight: 200;
+}
+.files-page .get-auth-left h3 a {
+  color: #fff;
+  font-weight: bold;
 }
 .files-page .get-auth-left p {
   opacity: 0.6;
