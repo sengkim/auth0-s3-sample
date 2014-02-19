@@ -40,11 +40,15 @@ function list_files(bucket, callback) {
   bucket.listObjects({Prefix: folder_prefix + user.get().profile.user_id}, function(err, data) { 
     if (err) return callback(err);
     var files = [];
+
     for (var i in data.Contents) {
-      files.push({
-        name: data.Contents[i].Key.replace(folder_prefix + user.get().profile.user_id + '/', ''),
-        date: moment(new Date(data.Contents[i].LastModified)).fromNow(),
-        key : data.Contents[i].Key
+      bucket.getSignedUrl('getObject', { Expires: 24 * 60, Key: data.Contents[i].Key }, function(err, url_bucket) {
+          files.push({
+            url: url_bucket,
+            name: data.Contents[i].Key.replace(folder_prefix + user.get().profile.user_id + '/', ''),
+            date: moment(new Date(data.Contents[i].LastModified)).fromNow(),
+            key : data.Contents[i].Key
+          });
       });
     }
 
