@@ -56,7 +56,6 @@ a:hover {
 .login-page .get-auth0 {
   color: #fff;
   background: #4e7ac7;
-  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
   position: fixed;
   bottom: 0;
   left: 0;
