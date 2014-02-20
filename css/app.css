@@ -330,6 +330,15 @@ footer a {
   .login-info span {
     display: none;
   }
+  .login-page h1 {
+    font-size: 20px;
+  }
+  .login-page h2 {
+    font-size: 14px;
+  }
+  .login-page .login-box {
+    padding-top: 0;
+  }
   table thead tr th:first-child,
   table tbody tr th:first-child,
   table thead tr td:first-child,
