@@ -311,7 +311,7 @@ footer a {
   .login-page .get-auth0 h3 span {
     display: block;
     -webkit-animation: none;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
   .login-page .get-auth0 h3 .btn {
