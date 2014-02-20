@@ -327,6 +327,19 @@ footer a {
   }
 }
 @media screen and (max-width: 400px) {
+  .login-info span {
+    display: none;
+  }
+  table thead tr th:first-child,
+  table tbody tr th:first-child,
+  table thead tr td:first-child,
+  table tbody tr td:first-child {
+    display: none;
+  }
+  table thead td,
+  table tbody td {
+    font-size: 12px;
+  }
   .get-auth-left {
     float: none;
   }
