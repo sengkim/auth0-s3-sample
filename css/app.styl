@@ -1,7 +1,5 @@
 body
 	-webkit-font-smoothing antialiased
-	min-width 800px !important
-	width 100%
 
 h1, h2, h3
 	font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
@@ -11,8 +9,6 @@ h1, h2, h3
 body.home
 	background #ecf0f1
 	
-
-
 a
 	&:hover
 		text-decoration none
@@ -291,3 +287,53 @@ footer
 #drop-anywhere.show {
   -webkit-animation: show 300ms;
 }
+
+
+.left 
+	float: left
+
+.right 
+	float: right
+
+@media screen and (max-width: 700px)
+	body.home
+		background: #fff;
+
+
+	.login-page 
+		.login-box 
+			.welcome-badge
+				width: 100px;
+				height: 100px;
+			.btn.btn-primary
+				display: block
+				margin-top: 30px;
+
+		.get-auth0
+			min-width: 0;
+			padding: 10px;
+			position: static;
+
+
+		.get-auth0 h3 span
+			display: block
+			-webkit-animation: none;
+			font-size: 20px;
+			margin-bottom: 20px;
+
+		.get-auth0 h3 .btn 
+			margin: 0;	
+			-webkit-animation: none;
+
+	.get-auth-left
+		margin-bottom: 30px;
+
+	.left, .right
+		float: none;
+
+
+@media screen and (max-width: 400px)
+	
+
+	.get-auth-left
+		float: none;
