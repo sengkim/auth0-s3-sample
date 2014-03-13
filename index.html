@@ -20,7 +20,7 @@
       </div>
     </div>
      <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
-     <script src="https://d19p4zemcycm7a.cloudfront.net/w2/auth0-widget-2.4.min.js"></script>
+     <script src="https://cdn.auth0.com/w2/auth0-widget-2.6.min.js"></script>
      <script src="js/config.js"></script>
 
      <script>
@@ -33,7 +33,7 @@
         callbackOnLocationHash: true
       });
 
-      widget.parseHash(window.location.hash, function (profile, id_token, access_token, state) {
+      widget.getProfile(window.location.hash, function (err, profile, id_token, access_token, state) {
         store.set('profile', JSON.stringify(profile));
         store.set('id_token', id_token);
 
