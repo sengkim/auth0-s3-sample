@@ -92,26 +92,6 @@
     <script src="js/config.js"></script>
 
     <script type="text/javascript">
-      var container = document.getElementById('drop-here');
-      var drop = DropAnywhere(function(e){
-        $('body').append('<img src="img/loading_black.gif" class="loading-global" />');
-        e.items.forEach(function(item) {
-
-          if (item) upload_file(bucket, item, function(err) {
-            if (err) console.log('error uploading file');
-
-            $('.loading-global').remove();
-
-          });
-        });
-
-
-        refresh_list(bucket);
-
-      });
-    </script>
-
-    <script type="text/javascript">
       window.user = {
           get: function() {
               if (!store.get('profile')) return;
