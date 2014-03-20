@@ -1,3 +1,8 @@
+color_blue = #14204d;
+color_blue_light = #3cc8f4;
+color_red = #eb5422;
+color_grey = #d1d2d4;
+
 body
 	-webkit-font-smoothing antialiased
 
@@ -7,7 +12,7 @@ h1, h2, h3
 
 
 body.home
-	background #ecf0f1
+	background color_grey
 	
 a
 	&:hover
@@ -49,9 +54,11 @@ a
 				margin-top 20px
 				i
 					margin-right 10px
+
 	.get-auth0
 		color #fff
-		background #4e7ac7
+		background color_blue
+		background: linear-gradient(45deg,  rgba(20,32,77,1) 0%,rgba(60,200,244,1) 100%); /* W3C */
 		position fixed
 		bottom 0
 		left 0
@@ -72,11 +79,11 @@ a
 				padding 14px 20px
 				font-size: 12px;
 				letter-spacing 1px
-				background-color #94c231
+				background-color color_red
 				margin-left 20px
 				-webkit-animation get_auth0_btn 2s
 				&:hover
-					background-color #59741d
+					background-color darken(color_red, 40%)
 
 .container
 	max-width 800px
@@ -107,7 +114,7 @@ a
 					border-radius 40px
 	.get-auth-left
 		background-color #4e7ac7
-		background-image -webkit-radial-gradient(right top, #34478C 0%, rgba(52,71,140,0) 70%)
+		background: linear-gradient(45deg,  rgba(20,32,77,1) 0%,rgba(60,200,244,1) 100%); /* W3C */
 		color #fff
 		padding 20px 10px
 		text-align center
@@ -121,9 +128,12 @@ a
 			margin auto
 			margin-bottom 10px
 		img
-			width 40px
-			height auto
-			margin-top 14px
+			max-width: 40%
+			margin: auto;
+			margin-bottom: 10px;
+			// width 40px
+			// height auto
+			// margin-top 14px
 		h3
 			margin-top 0
 			font-weight 200
@@ -134,6 +144,11 @@ a
 			opacity 0.6
 		.btn
 			margin-top 10px
+			background-color: color_red
+			&:hover
+				background-color: darken(color_red, 30%)
+
+
 	.files-list
 		h3
 			margin-top 0

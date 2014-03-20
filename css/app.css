@@ -8,7 +8,7 @@ h3 {
   font-weight: lighter;
 }
 body.home {
-  background: #ecf0f1;
+  background: #d1d2d4;
 }
 a:hover {
   text-decoration: none;
@@ -53,7 +53,9 @@ a:hover {
 }
 .login-page .get-auth0 {
   color: #fff;
-  background: #4e7ac7;
+  background: #14204d;
+  background: linear-gradient(45deg, #14204d 0%, #3cc8f4 100%);
+/* W3C */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -77,12 +79,12 @@ a:hover {
   padding: 14px 20px;
   font-size: 12px;
   letter-spacing: 1px;
-  background-color: #94c231;
+  background-color: #eb5422;
   margin-left: 20px;
   -webkit-animation: get_auth0_btn 2s;
 }
 .login-page .get-auth0 h3 .btn:hover {
-  background-color: #59741d;
+  background-color: #942f0d;
 }
 .container {
   max-width: 800px;
@@ -117,7 +119,8 @@ a:hover {
 }
 .files-page .get-auth-left {
   background-color: #4e7ac7;
-  background-image: -webkit-radial-gradient(right top, #34478c 0%, rgba(52,71,140,0) 70%);
+  background: linear-gradient(45deg, #14204d 0%, #3cc8f4 100%);
+/* W3C */
   color: #fff;
   padding: 20px 10px;
   text-align: center;
@@ -133,9 +136,9 @@ a:hover {
   margin-bottom: 10px;
 }
 .files-page .get-auth-left img {
-  width: 40px;
-  height: auto;
-  margin-top: 14px;
+  max-width: 40%;
+  margin: auto;
+  margin-bottom: 10px;
 }
 .files-page .get-auth-left h3 {
   margin-top: 0;
@@ -150,6 +153,10 @@ a:hover {
 }
 .files-page .get-auth-left .btn {
   margin-top: 10px;
+  background-color: #eb5422;
+}
+.files-page .get-auth-left .btn:hover {
+  background-color: #ad3710;
 }
 .files-page .files-list h3 {
   margin-top: 0;
