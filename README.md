@@ -4,7 +4,7 @@ This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2
 
 **Demo: <http://auth0.github.io/auth0-s3-sample>**
 
-![](https://cloudup.com/cF6k5rJr309+)
+![](https://cloudup.com/cSwYBXbHdfc+)
 
 ## How this works?
 
