@@ -1,0 +1,8 @@
+name: Backend-less dropbox clone
+description: This sample uses Auth0 and its integration with AWS APIs (S3, SES, DynamoDB, EC2, etc.) in combination with the powerful IAM policies.
+type: sample
+tags:
+  - amazon-s3
+  - browser
+  - javascript
+  - single-page-app
