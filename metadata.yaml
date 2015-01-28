@@ -1,7 +1,0 @@
-name: Backend-less dropbox clone
-type: sample
-tags:
-  - amazon-s3
-  - browser
-  - javascript
-  - single-page-app
